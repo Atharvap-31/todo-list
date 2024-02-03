@@ -3,7 +3,7 @@ import Todo from "./Todo";
 
 function App() {
   return (
-    <div className="bg-blue-300 overflow-y-hidden h-svh">
+    <div className="bg-blue-300 overflow-y-scroll h-svh">
       <Todo />
     </div>
   );
