@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Todo = () => {
-  const [input, setInput] = useState("aa");
+  const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
 
   const addTodo = () => {
@@ -14,10 +14,8 @@ const Todo = () => {
   };
 
   const deleteTodo = (i) => {
-    setTodos((todos) => {
-      const deletedTodo = todos.filter((todo, idx) => i !== idx);
-      return deletedTodo;
-    });
+    const deletedTodoList = todos.filter((todo, idx) => i !== idx);
+    setTodos(deletedTodoList);
   };
 
   const removeAllTodo = () => {
